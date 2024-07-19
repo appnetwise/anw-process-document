@@ -4,8 +4,6 @@ metaTitle: 'Template Selection and Setup'
 metaDescription: 'Template selection and setup in the structured approach to modern website development.'
 ---
 
-## 4. Template Selection and Setup
-
 ### Template Selection
 
 Once requirements are confirmed, the next step is to select an appropriate website template that meets the project's needs. Templates are sourced from ThemeForest based on design aesthetics, responsiveness, and feature compatibility.

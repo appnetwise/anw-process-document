@@ -4,8 +4,6 @@ metaTitle: 'SEO and Analytics'
 metaDescription: 'SEO and analytics in the structured approach to modern website development.'
 ---
 
-## 8. SEO and Analytics
-
 ### Search Engine Optimization (SEO)
 
 Optimize the website for search engines to improve visibility and organic traffic using Google Search Console and other SEO best practices.

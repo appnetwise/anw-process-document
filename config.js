@@ -41,6 +41,7 @@ const config = {
     subNavOrder: {
       '/website-development-process': [
         'initial-planning',
+        'development-approaches',
         'template-selection',
         'development',
         'qa',
@@ -53,7 +54,7 @@ const config = {
     links: [{ text: 'AppNetWise', link: 'https://appnetwise.com' }],
     frontLine: false,
     ignoreIndex: true,
-    title: '<span>UI/UX</span>',
+    title: '<span>ANW Documentation</span>',
   },
   siteMetadata: {
     title: 'AppNetWise',

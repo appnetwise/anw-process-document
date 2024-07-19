@@ -4,8 +4,6 @@ metaTitle: 'Deployment'
 metaDescription: 'Deployment process in the structured approach to modern website development.'
 ---
 
-## 7. Deployment
-
 ### Deployment Process
 
 Deploy the website using GitHub Pages for public access, following best practices to ensure smooth deployment and maintenance.

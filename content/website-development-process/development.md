@@ -4,8 +4,6 @@ metaTitle: 'Development Phase'
 metaDescription: 'Development phase in the structured approach to modern website development.'
 ---
 
-## 5. Development Phase
-
 ### Implementation and Customization
 
 Focus on frontend development using modern frameworks and libraries to enhance functionality and user experience.

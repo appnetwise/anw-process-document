@@ -4,8 +4,6 @@ metaTitle: 'Initial Planning'
 metaDescription: 'Initial planning phase in the structured approach to modern website development.'
 ---
 
-## 3. Initial Planning
-
 ### Requirement Gathering
 
 The success of any website project begins with a clear understanding of client requirements. This phase involves:
