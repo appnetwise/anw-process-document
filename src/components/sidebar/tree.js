@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import config from '../../../config';
 import TreeNode from './treeNode';
 
-const calculateTreeData = edges => {
+const calculateTreeData = (edges) => {
   const originalData = config.sidebar.ignoreIndex
     ? edges.filter(
         ({
@@ -30,7 +30,7 @@ const calculateTreeData = edges => {
         config.gatsby && config.gatsby.trailingSlash ? parts.slice(1, -2) : parts.slice(1, -1);
 
       for (const part of slicedParts) {
-        let tmp = prevItems && prevItems.find(({ label }) => label == part);
+        let tmp = prevItems && prevItems.find(({ label }) => label === part);
 
         if (tmp) {
           if (!tmp.items) {
@@ -64,15 +64,11 @@ const calculateTreeData = edges => {
   );
 
   const {
-    sidebar: { forcedNavOrder = [] },
+    sidebar: { forcedNavOrder = [], subNavOrder = {} },
   } = config;
 
-  const tmp = [...forcedNavOrder];
-
-  if (config.gatsby && config.gatsby.trailingSlash) {
-  }
-  tmp.reverse();
-  return tmp.reduce((accu, slug) => {
+  const tmp = [...forcedNavOrder].reverse();
+  const sortedTree = tmp.reduce((accu, slug) => {
     const parts = slug.split('/');
 
     let { items: prevItems } = accu;
@@ -81,7 +77,7 @@ const calculateTreeData = edges => {
       config.gatsby && config.gatsby.trailingSlash ? parts.slice(1, -2) : parts.slice(1, -1);
 
     for (const part of slicedParts) {
-      let tmp = prevItems.find(item => item && item.label == part);
+      let tmp = prevItems.find((item) => item && item.label === part);
 
       if (tmp) {
         if (!tmp.items) {
@@ -95,24 +91,37 @@ const calculateTreeData = edges => {
         prevItems = tmp.items;
       }
     }
-    // sort items alphabetically.
-    prevItems.map(item => {
-      item.items = item.items.sort(function(a, b) {
-        if (a.label < b.label) return -1;
-        if (a.label > b.label) return 1;
-        return 0;
-      });
-    });
+
     const slicedLength =
       config.gatsby && config.gatsby.trailingSlash ? parts.length - 2 : parts.length - 1;
 
     const index = prevItems.findIndex(({ label }) => label === parts[slicedLength]);
 
-    if (prevItems.length) {
+    if (prevItems.length && index !== -1) {
       accu.items.unshift(prevItems.splice(index, 1)[0]);
     }
     return accu;
   }, tree);
+
+  // Function to sort items based on the order specified in the config
+  const sortItems = (items, parentSlug) => {
+    if (parentSlug && config.sidebar.subNavOrder[parentSlug]) {
+      const order = config.sidebar.subNavOrder[parentSlug];
+      items.sort((a, b) => order.indexOf(a.label) - order.indexOf(b.label));
+    } else {
+      items.sort((a, b) => (a.label < b.label ? -1 : a.label > b.label ? 1 : 0));
+    }
+    items.forEach((item) => {
+      if (item.items && item.items.length > 0) {
+        sortItems(item.items, `${parentSlug}/${item.label}`); // Recursive call
+      }
+    });
+  };
+
+  // Apply sorting to the top level and sub-items
+  sortItems(sortedTree.items, '');
+
+  return sortedTree;
 };
 
 const Tree = ({ edges }) => {
@@ -122,7 +131,7 @@ const Tree = ({ edges }) => {
 
   const defaultCollapsed = {};
 
-  treeData.items.forEach(item => {
+  treeData.items.forEach((item) => {
     if (config.sidebar.collapsedNav && config.sidebar.collapsedNav.includes(item.url)) {
       defaultCollapsed[item.url] = true;
     } else {
@@ -131,7 +140,7 @@ const Tree = ({ edges }) => {
   });
   const [collapsed, setCollapsed] = useState(defaultCollapsed);
 
-  const toggle = url => {
+  const toggle = (url) => {
     setCollapsed({
       ...collapsed,
       [url]: !collapsed[url],

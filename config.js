@@ -37,13 +37,19 @@ const config = {
     },
   },
   sidebar: {
-    forcedNavOrder: [
-      '/introduction', // add trailing slash if enabled above
-      '/codeblock',
-    ],
-    collapsedNav: [
-      '/codeblock', // add trailing slash if enabled above
-    ],
+    forcedNavOrder: ['/website-development-process'],
+    subNavOrder: {
+      '/website-development-process': [
+        'initial-planning',
+        'template-selection',
+        'development',
+        'qa',
+        'deployment',
+        'seo',
+        'conclusion',
+      ], // Order of sub-items within '/websiteDevelopmentProcess'
+    },
+    collapsedNav: ['/website-development-process'],
     links: [{ text: 'AppNetWise', link: 'https://appnetwise.com' }],
     frontLine: false,
     ignoreIndex: true,
