@@ -1,7 +1,7 @@
 const config = {
   gatsby: {
     pathPrefix: '/',
-    siteUrl: 'https://hasura.io',
+    siteUrl: 'https://appnetwise.com/',
     gaTrackingId: null,
     trailingSlash: false,
   },
@@ -9,7 +9,7 @@ const config = {
     logo: 'https://appnetwise.com/static/logo4-50723923112d55b8165636f8401ff3e2.svg',
     logoLink: 'https://appnetwise.com/',
     title:
-      "<a href='https://hasura.io/learn/'><img class='img-responsive' src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/learn-logo.svg' alt='Learn logo' /></a>",
+      "<a href='https://appnetwise.com/'><img class='img-responsive' src='https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/learn-logo.svg' alt='Learn logo' /></a>",
     githubUrl: 'https://github.com/hasura/gatsby-gitbook-boilerplate',
     helpUrl: '',
     tweetText: '',
@@ -44,17 +44,17 @@ const config = {
     collapsedNav: [
       '/codeblock', // add trailing slash if enabled above
     ],
-    links: [{ text: 'Appnetwise', link: 'https://appnetwise.com' }],
+    links: [{ text: 'AppNetWise', link: 'https://appnetwise.com' }],
     frontLine: false,
     ignoreIndex: true,
     title: '<span>UI/UX</span>',
   },
   siteMetadata: {
-    title: 'Gatsby Gitbook Boilerplate | Hasura',
-    description: 'Documentation built with mdx. Powering hasura.io/learn ',
+    title: 'AppNetWise',
+    description: 'Documentation built with mdx. Powering AppNetWise ',
     ogImage: null,
-    docsLocation: 'https://github.com/hasura/gatsby-gitbook-boilerplate/tree/master/content',
-    favicon: 'https://graphql-engine-cdn.hasura.io/img/hasura_icon_black.svg',
+    docsLocation: 'https://github.com/appnetwise/anw-process-document',
+    favicon: './src/components/images/anw-logo.png',
   },
   pwa: {
     enabled: false, // disabling this will also remove the existing service worker.
