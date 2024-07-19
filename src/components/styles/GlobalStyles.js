@@ -481,6 +481,7 @@ export const baseStyles = css`
     width: 100%;
     padding-right: 35px;
     padding-left: 15px;
+    border-radius: 4px;
   }
 
   .showFrontLine .item > a:hover {
