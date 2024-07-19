@@ -53,8 +53,8 @@ const config = {
     title: 'AppNetWise',
     description: 'Documentation built with mdx. Powering AppNetWise ',
     ogImage: null,
-    docsLocation: 'https://github.com/appnetwise/anw-process-document',
-    favicon: './src/components/images/anw-logo.png',
+    docsLocation: 'https://github.com/appnetwise/anw-process-document/blob/main/content',
+    favicon: 'https://appnetwise.com/favicon-32x32.png?v=a3c8c4fd807cb62bea3f2371445ad700',
   },
   pwa: {
     enabled: false, // disabling this will also remove the existing service worker.
