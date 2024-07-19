@@ -37,7 +37,7 @@ const config = {
     },
   },
   sidebar: {
-    forcedNavOrder: ['/website-development-process'],
+    forcedNavOrder: ['/website-development-process', '/test'],
     subNavOrder: {
       '/website-development-process': [
         'initial-planning',
@@ -50,7 +50,7 @@ const config = {
         'conclusion',
       ], // Order of sub-items within '/websiteDevelopmentProcess'
     },
-    collapsedNav: ['/website-development-process'],
+    collapsedNav: ['/website-development-process', '/test'],
     links: [{ text: 'AppNetWise', link: 'https://appnetwise.com' }],
     frontLine: false,
     ignoreIndex: true,
