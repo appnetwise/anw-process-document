@@ -11,6 +11,8 @@ For clients who prefer rapid development and ease of maintenance, we use platfor
 - **Webflow**: Allows for visually driven development with powerful design capabilities.
 - **WordPress**: Provides extensive plugins and themes for customizable and scalable website development.
 
+  ![Webflow](../images/img2.png)
+
 ### Custom Development
 
 For clients with specific needs that require more control and customization, we opt for custom development.

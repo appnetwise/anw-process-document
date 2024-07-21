@@ -18,6 +18,6 @@ Upon client approval of the selected template, proceed with the purchase and set
 - **Purchase**: Complete the purchase of the chosen template on ThemeForest, ensuring all necessary licenses and documentation are obtained.
 - **Repository Setup**: Create a dedicated repository in the organization's version control system (e.g., GitHub).
 - **Upload the purchased template and configure it within the repository structure**.
-- **Set up initial project environment and dependencies as specified by the template documentation**.
-- **Install required development tools and libraries to support local development environments**.
-- **Verify setup by running initial tests to ensure compatibility and functionality**.
+- Set up initial project environment and dependencies as specified by the template documentation.
+- Install required development tools and libraries to support local development environments.
+- Verify setup by running initial tests to ensure compatibility and functionality.

@@ -57,7 +57,7 @@ const config = {
     title: '<span>ANW Documentation</span>',
   },
   siteMetadata: {
-    title: 'AppNetWise',
+    title: 'AppNetWise Docs',
     description: 'Documentation built with mdx. Powering AppNetWise ',
     ogImage: null,
     docsLocation: 'https://github.com/appnetwise/anw-process-document/blob/main/content',
@@ -66,8 +66,8 @@ const config = {
   pwa: {
     enabled: false, // disabling this will also remove the existing service worker.
     manifest: {
-      name: 'Gatsby Gitbook Starter',
-      short_name: 'GitbookStarter',
+      name: 'ANW Docs',
+      short_name: 'ANW Docs',
       start_url: '/',
       background_color: '#6b37bf',
       theme_color: '#6b37bf',
