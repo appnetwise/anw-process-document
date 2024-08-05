@@ -1,7 +1,7 @@
 ---
 title: 'Conclusion'
 metaTitle: 'Conclusion'
-metaDescription: 'Conclusion of the structured approach to modern website development.'
+metaDescription: 'Conclusion of the structured approach to website development.'
 ---
 
 ### Conclusion
